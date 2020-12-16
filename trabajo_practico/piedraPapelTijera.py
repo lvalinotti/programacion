@@ -10,7 +10,6 @@ seguirJugando = int(input("Cuantas manos quieres jugar \n"))
 ganoJuego=""
 ganoUsuario = 0
 ganoComputadora = 0
-print(type(seguirJugando))
 while seguirJugando!=0:
     computadora =random.choice(['R', 'P', 'T'])
     usuario = input("'R' Piedra, 'P' Papel o 'T' Tijera \n")
@@ -18,14 +17,14 @@ while seguirJugando!=0:
     if usuario == computadora:
         print('Es un empate')
     elif gano(usuario,computadora):
-        ganoUsuario=++1
+        ganoUsuario+=1
         print('Ganaste')
     else:
-        ganoComputadora=++1
+        ganoComputadora+=1
         print('Perdiste')
     if ganoUsuario>ganoComputadora:
         ganoJuego="Ususario"
-    elif:
+    elif ganoUsuario<ganoComputadora:
         ganoJuego="Computadora"
     else:
         ganoJuego="Empate"
